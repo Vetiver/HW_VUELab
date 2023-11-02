@@ -1,0 +1,241 @@
+<script>
+import { ref } from 'vue'
+export default {
+    setup(){
+
+const photo = ref(require('../../assets/images/photo.jpg'))
+
+return  { photo }
+    }
+}
+</script>
+
+<template lang="">
+     <section class="aboutMe">
+      <p class="aboutMe__student">Студент</p>
+
+      <div class="aboutMe__text-avatar">
+        
+        <div class="aboutMe__text">
+          <h2 class="aboutMe__name">Дмитрий(Vetiver) Кривицкий</h2>
+
+          <p class="aboutMe__job">Студент разработчик</p>
+
+          <p class="aboutMe__biography">
+            Я родился и живу в Москве, закончил ГБПОУ МТК. Я люблю слушать музыку, а ещё увлекаюсь
+            скейтбордом и сноубордом. Код начал писать еще в колледже из личного интереса. Работал и работаю на фрилансе Frontend разработчиком. Сейчас осваиваю программу курса. Вне учебы занимаюсь изучением Golang(Привет Виктору Лапину, вы мой кумир)
+          </p>
+          <div class="aboutMe__links">
+            <a
+            href="https://github.com/Vetiver"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="aboutMe__link"            
+          >
+            Github
+          </a>
+          <a
+            href="https://t.me/entershikariii"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="aboutMe__link"            
+          >
+            Telegram
+          </a>
+          <a
+            href="https://gitlab.com/Vetiver1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="aboutMe__link"            
+          >
+          Gitlab
+          </a>
+          </div>
+          
+        </div>
+        <img v-bind:src="photo" class="aboutMe__avatar" alt="фото" />
+      </div>
+    </section>
+</template>
+
+<style scoped>
+    .aboutMe {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMe__student {
+  margin: 110px 0 0;
+  padding: 0 0 23px;
+  border-bottom: 1px solid #DADADA;
+  font-size: 22px;
+  letter-spacing: -0.88px;  
+}
+
+.aboutMe__text-avatar {
+  display: flex;
+  gap: 270px;
+  padding: 66px 0 0;
+  margin: 0;
+}
+
+.aboutMe__text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutMe__name {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;  
+  line-height: 58px;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.aboutMe__job {
+  margin: 18px 0 0 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.aboutMe__biography {
+  margin: 26px 0 0 0;
+  padding: 0;
+  width: 599px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.aboutMe__link {
+    text-decoration: none;
+  color:#FFF;
+  margin: 50px 0 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aboutMe__avatar {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.aboutMe__links {
+    display: flex;
+    gap: 30px;
+}
+
+/* ----------------------------------------------- */
+
+@media screen and (max-width: 1279px) {
+  .aboutMe {
+    max-width: 668px;
+  }
+  
+  .aboutMe__student {
+    margin: 88px 0 0;
+    padding: 0 0 23px;
+    border-bottom: 1px solid #DADADA;
+    font-size: 22px;
+    letter-spacing: -0.88px;  
+  }
+  
+  .aboutMe__text-avatar {
+    gap: 49px;
+  }
+    
+  .aboutMe__name {
+    font-size: 40px;  
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
+  
+  .aboutMe__job {
+    margin: 16px 0 0 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  
+  .aboutMe__biography {
+    margin: 20px 0 0 0;
+    width: 364px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .aboutMe__git {
+    margin: 87px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .aboutMe__avatar {
+    width: 255px;
+    height: 307px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutMe {
+    max-width: 292px;
+  }
+  
+  .aboutMe__student {
+    margin: 70px 0 0;
+    padding: 0 0 28px;
+    border-bottom: 1px solid #DADADA;
+    font-size: 18px;
+    letter-spacing: -0.72px;  
+  }
+  
+  .aboutMe__text-avatar {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 60px 0 0;
+  }
+    
+  .aboutMe__name {
+    font-size: 30px;  
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+  
+  .aboutMe__job {
+    margin: 20px 0 0 0;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  
+  .aboutMe__biography {
+    margin: 20px 0 0 0;
+    width: 292px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  
+  .aboutMe__git {
+    margin: 40px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .aboutMe__avatar {
+    width: 292px;
+    height: 352px;
+    border-radius: 10px;
+  }
+}
+</style>
